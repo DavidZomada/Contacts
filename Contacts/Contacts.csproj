@@ -8,5 +8,9 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Forms.DebugRainbows" Version="1.1.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Xamarin.Forms.DebugRainbows" />
   </ItemGroup>
 </Project>
