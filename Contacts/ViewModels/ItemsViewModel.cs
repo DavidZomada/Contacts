@@ -7,6 +7,8 @@ using Xamarin.Forms;
 
 using Contacts.Models;
 using Contacts.Views;
+using System.Windows.Input;
+using Xamarin.Essentials;
 
 namespace Contacts.ViewModels
 {
@@ -28,7 +30,12 @@ namespace Contacts.ViewModels
             ItemTapped = new Command<Item>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
+
+            Title = "Contacts by David Zomada!";
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
+
+        public ICommand OpenWebCommand { get; }
 
         async Task ExecuteLoadItemsCommand()
         {

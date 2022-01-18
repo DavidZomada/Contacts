@@ -58,6 +58,9 @@
     <PackageReference Include="Xamarin.Forms.DebugRainbows">
       <Version>1.1.4</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>19.4.0.42</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
