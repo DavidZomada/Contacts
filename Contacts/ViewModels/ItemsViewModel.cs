@@ -16,26 +16,21 @@ namespace Contacts.ViewModels
     {
         private Item _selectedItem;
 
-        public ObservableCollection<Item> Items { get; }
+        public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
         public Command<Item> ItemTapped { get; }
 
         public ItemsViewModel()
         {
-            Title = "Browse";
+            Title = "Contacts";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
             ItemTapped = new Command<Item>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
-
-            Title = "Contacts by David Zomada!";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
-
-        public ICommand OpenWebCommand { get; }
 
         async Task ExecuteLoadItemsCommand()
         {

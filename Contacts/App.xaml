@@ -28,9 +28,21 @@
                     </VisualStateGroupList>
                 </Setter>
             </Style>
-            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
-               <Setter Property="rainbows:DebugRainbow.ShowColors" Value="True" />
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{AppThemeBinding Light='#6200EE', Dark='#121212'}"/>
+                <Setter Property="BarTextColor" Value="{AppThemeBinding Light='#E0CFFB', Dark='#DDDDDD'}"/>
             </Style>
+
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light='#E5E5E5', Dark='#000000'}"/>
+            </Style>
+
+            <!--
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+               <Setter Property="rainbows:DebugRainbow.ShowColors" Value="False" />
+            </Style>
+            -->
         </ResourceDictionary>        
     </Application.Resources>
 </Application>

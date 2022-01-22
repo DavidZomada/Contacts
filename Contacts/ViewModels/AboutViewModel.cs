@@ -10,7 +10,6 @@ namespace Contacts.ViewModels
         public AboutViewModel()
         {
             Title = "Contacts by David Zomada";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
 
         public ICommand OpenWebCommand { get; }

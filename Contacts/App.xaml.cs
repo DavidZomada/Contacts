@@ -14,7 +14,7 @@ namespace Contacts
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new ItemsPage());
         }
 
         protected override void OnStart()
